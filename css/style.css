@@ -20,7 +20,9 @@ li {
 }
 
 .main-menu__item {
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 40px;
     width: 40px;
     background-color: #FF3E79;
@@ -30,19 +32,20 @@ li {
 .main-menu__logo {
     width: 96px;
     height: 51px;
-    background: url("../icons/logo.png") no-repeat center center;
+    background: url("../icons/main-menu/logo.png") no-repeat center center;
 }
 
 .main-menu__icon {
-    position: absolute;
-    top: 10px;
-    left: 10px;
     height: 20px;
     width: 20px;
 }
 
 .main-title {
     
+}
+
+main {
+    background-color: #F8F8F8;
 }
 
 
