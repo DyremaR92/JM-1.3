@@ -2,7 +2,7 @@
 
 ul {
     overflow: auto;
-    padding: 0 1.6rem;
+    padding: 0;
     margin: 0;
 }
 li {
@@ -21,6 +21,10 @@ html{
 }
 
 @media screen and (min-width: 320px) {
+
+    .container {
+        padding: 0 1.6rem;
+    }
 
     .main-menu {
         display: flex;
@@ -66,7 +70,7 @@ html{
     
     .main-title {
         margin: 0;
-        padding: 2.4rem 1.6rem 0;
+        padding: 2.4rem 0;
         font-weight: bold;
         font-size: 2.8rem;
 
@@ -89,22 +93,28 @@ html{
     .secondary-menu {
         display: flex;
         justify-content: space-between;
-        padding-left: 1.6rem;
-        margin-top: 2.4rem;
         height: 4rem;
         width: 100%;
         overflow-x: scroll;
     }
     
     .secondary-menu__item {
-        display: block;
-        width: 80%;
+        display: flex;
+        font-size: 16px;
+        text-align: center;
+        color: #7E7E82;
+        overflow: unset;
+    }
+
+    .secondary-menu__item:first-of-type {
+        display: none;
+    }
+
+    .secondary-menu__item--active {
         background: #FFFFFF;
         border: 2px solid #B8FFEC;
         box-sizing: border-box;
         border-radius: 6px;
-        font-size: 16px;
-        color: #7E7E82;
     }
 
     .secondary-menu__item a {
@@ -114,6 +124,8 @@ html{
     .secondary-menu__item a:visited {
         color: #7E7E82;
     }
+
+
     
     
     .self-info {
@@ -125,6 +137,8 @@ html{
     }
     
     .self-info__main-text {
+        font-size: 14px;
+        font-weight: 500;
     }
     
     .self-info__img {
