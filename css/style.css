@@ -90,7 +90,7 @@ html{
     .secondary-menu {
         display: flex;
         justify-content: space-between;
-        overflow: scroll;
+        overflow-x: scroll;
     }
     
     .secondary-menu__item {
@@ -128,25 +128,41 @@ html{
     
     .self-info {
         width: 100%;
+
     }
 
     .self-info img {
         width: 100%;
     }
     
-    .self-info__main-text {
-        font-size: 14px;
-        font-weight: 500;
+    .self-info__text {
+        overflow: hidden;
+        text-overflow: clip;
+        display: block;
+        line-height: 18px;
+        max-height: 100px;
+        letter-spacing: 0.2px;     
     }
     
     .self-info__img {
+        margin-top: 16px;
     }
     
+    .self-info__button {
+        margin-top: 16px;
+    }
+
     .main-text {
+        font-size: 14px;
     }
     
     
     .button {
+        border: none;
+        padding-left: 30px;
+        background: #F8F8F8 url("../icons/button/expand.png") no-repeat center left;
+        font-size: 16px;
+        font-weight: 500;
     }
 }
 
