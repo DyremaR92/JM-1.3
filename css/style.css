@@ -22,7 +22,8 @@ html{
 
 @media screen and (min-width: 320px) {
     body {
-        overflow-y: auto;
+        overflow:scroll;
+        -webkit-overflow-scrolling:touch;
     }
 
     .container {
@@ -70,7 +71,6 @@ html{
         padding: 2.4rem 0;
         font-weight: bold;
         font-size: 2.8rem;
-
     }
 
 
