@@ -21,9 +21,13 @@ html{
 }
 
 @media screen and (min-width: 320px) {
+    body {
+        overflow-y: auto;
+    }
 
     .container {
-        padding: 0 1.6rem;
+        width: 90%;
+        margin: 0 auto;
     }
 
     .main-menu {
@@ -45,13 +49,6 @@ html{
 
     .main-menu__item:nth-of-type(n+3):nth-of-type(-n+5) {
         display: none;
-    }
-
-    .main-menu__item:nth-last-of-type(2)::before {
-        content: '';
-        border-left: 2px solid #EAEAEA;
-        height: 3.2rem;
-        transform: translateX(-2rem);
     }
     
     .main-menu__logo {
@@ -93,17 +90,19 @@ html{
     .secondary-menu {
         display: flex;
         justify-content: space-between;
-        height: 4rem;
-        width: 100%;
-        overflow-x: scroll;
+        overflow: scroll;
     }
     
     .secondary-menu__item {
         display: flex;
+        flex: 1 0 auto;
+        height: 4rem;
+        box-sizing: border-box;
+        padding: .8rem;
         font-size: 16px;
         text-align: center;
-        color: #7E7E82;
-        overflow: unset;
+        border: 2px solid #F8F8F8;
+        border-radius: 6px;
     }
 
     .secondary-menu__item:first-of-type {
@@ -112,13 +111,12 @@ html{
 
     .secondary-menu__item--active {
         background: #FFFFFF;
-        border: 2px solid #B8FFEC;
-        box-sizing: border-box;
-        border-radius: 6px;
+        border-color: #B8FFEC;
     }
 
     .secondary-menu__item a {
         text-decoration: none;
+        color: #7E7E82;
     }
 
     .secondary-menu__item a:visited {
