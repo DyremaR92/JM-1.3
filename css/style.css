@@ -11,6 +11,7 @@ li {
 
 
 /* Custom styles */
+
 html{
     font-size: 62.5%;
     font-family: "TT Lakes", Arial, sans-serif;
@@ -56,8 +57,20 @@ html{
         width: 96px;
         height: 51px;
         background: url("../icons/main-menu/logo.png") no-repeat center center;
+        flex-grow: auto;
     }
     
+    .main-menu__divider {
+        height: 3.2rem;
+        width: .2rem;
+        background: url("../icons/main-menu/divider.png") no-repeat center center;
+    }
+
+    .main-menu__divider:first-of-type {
+        display: none;
+    }
+
+
     .main-menu__icon {
         display: flex;
         align-items: center;
