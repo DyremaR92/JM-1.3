@@ -45,10 +45,10 @@ html{
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: 4rem;
-        min-width: 4rem;
-        background-color: #FF3E79;
-        border-radius: 50%;
+    }
+
+    .main-menu__item-text {
+        display: none;
     }
     
     .main-menu__logo {
@@ -67,9 +67,13 @@ html{
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 2rem;
-        width: 2rem;
+        height: 4rem;
+        width: 4rem;
+        background-color: #FF3E79;
+        border-radius: 50%;
     }
+
+
     
 
     main {
@@ -78,6 +82,7 @@ html{
 
 
     .main-title {
+        flex-basis: 100%;
         margin: 0;
         padding: 2.4rem 0;
         font-weight: bold;
@@ -90,7 +95,7 @@ html{
         border-left: 4px solid #41F6D7;
         border-radius: 40%;
         position: absolute;
-        transform: translateX(-1.7rem);
+        left: 0;
     }
         
     .secondary-menu {
@@ -135,7 +140,7 @@ html{
         text-align: left;
     }
 
-    .main-menu__item:nth-of-type(n+3):nth-of-type(-n+5) {
+    .main-menu__item--mobile-hidden {
         display: none;
     }
     
@@ -143,7 +148,7 @@ html{
         display: none;
     }
 
-    .secondary-menu__item:first-of-type {
+    .secondary-menu__item--mobile-hidden {
         display: none;
     }
 
@@ -184,10 +189,11 @@ html{
 
 @media screen and (min-width: 768px) {
     .container {
-        width: 92%;
+        width: 93%;
+        margin: 0 auto;
     }
 
-    .main-menu__item:nth-of-type(n+3):nth-of-type(-n+5) {
+    .main-menu__item--mobile-hidden {
         display: flex;
     }
 
@@ -222,8 +228,53 @@ html{
         flex-basis: 50%;
     }
 
-    .secondary-menu__item:nth-last-of-type(3) {
-        display: none;
-    }
 }
 
+@media screen and (min-width: 1120px) {
+
+    .main-menu {
+        position: absolute;
+        right: 0;
+    }
+
+    .main-menu__item {
+        display: none;
+    }
+
+    .main-menu__item--desktop-show {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-menu__logo {
+        display: none;
+    }
+
+    .main-menu__divider:nth-of-type(n) {
+        display: none;
+    }
+
+    .main-menu__item-text {
+        display: block;
+        font-size: 1.6rem;
+    }
+
+    .secondary-menu {
+        flex-wrap: wrap;
+        justify-content: left;
+    }
+
+    .secondary-menu__item {
+        flex: 0 0 auto;
+    }
+
+    .secondary-menu__item--mobile-hidden {
+        display: flex;
+    }
+
+    .secondary-menu__item--desktop-hidden {
+        display: none;
+    }
+
+}
