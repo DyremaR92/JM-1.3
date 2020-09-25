@@ -40,6 +40,10 @@ html{
         align-items: center;
         height: 88px;
     }
+
+    .main-menu--desktop-only {
+        display: none;
+    }
     
     .main-menu__item {
         display: flex;
@@ -81,7 +85,7 @@ html{
     }
 
 
-    .main-title {
+    .main-title__header {
         flex-basis: 100%;
         margin: 0;
         padding: 2.4rem 0;
@@ -233,48 +237,10 @@ html{
 @media screen and (min-width: 1120px) {
 
     .main-menu {
-        position: absolute;
-        right: 0;
-    }
-
-    .main-menu__item {
         display: none;
     }
 
-    .main-menu__item--desktop-show {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .main-menu__logo {
-        display: none;
-    }
-
-    .main-menu__divider:nth-of-type(n) {
-        display: none;
-    }
-
-    .main-menu__item-text {
-        display: block;
-        font-size: 1.6rem;
-    }
-
-    .secondary-menu {
-        flex-wrap: wrap;
-        justify-content: left;
-    }
-
-    .secondary-menu__item {
-        flex: 0 0 auto;
-    }
-
-    .secondary-menu__item--mobile-hidden {
+    .main-menu--desktop-only {
         display: flex;
     }
-
-    .secondary-menu__item--desktop-hidden {
-        display: none;
-    }
-
 }
