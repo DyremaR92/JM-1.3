@@ -242,5 +242,59 @@ html{
 
     .main-menu--desktop-only {
         display: flex;
+        flex-basis: 35%;
     }
+
+    .main-menu__item-text {
+        display: block;
+        font-size: 16px;
+        font-weight: 500;
+        margin-right: 0.8rem;
+    }
+
+    .main-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .main-title::before {
+        margin-top: 2.4rem;
+    }
+
+    .main-title__header {
+        flex: 0 1 auto;
+    }
+
+    .self-info__text {
+        display: block;
+        line-height: 18px;     
+    }
+
+    .secondary-menu {
+        flex-wrap: wrap;
+    }
+
+    .secondary-menu__item {
+        flex-grow: 0;
+    }
+
+    .secondary-menu__item--mobile-hidden {
+        display: block;
+    }
+
+    .secondary-menu__item--desktop-hidden {
+        display: none;
+    }
+
+    .self-info__text {
+        width: 49rem;
+    }
+
+    .self-info__clip-text {
+        overflow: hidden;
+        text-overflow: clip;
+        max-height: 170px;
+    }
+
 }
